@@ -10,7 +10,7 @@ namespace FlareHR.Battleship
         public char X { get; }
         public int Y { get; }
 
-        public Position(char x, int y)
+        private Position(char x, int y)
         {
             X = x;
             Y = y;
@@ -18,10 +18,10 @@ namespace FlareHR.Battleship
 
         public static Position Create(char x, int y)
         {
-            return $"{x}{y}";
+            return Create($"{x}{y}");
         }
 
-        public static implicit operator Position(string position)
+        public static Position Create(string position)
         {
             if (ValidationRegex.IsMatch(position))
             {

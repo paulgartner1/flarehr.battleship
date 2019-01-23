@@ -13,7 +13,7 @@ namespace FlareHR.Battleship.Tests
             var position = "c5";
            
             // Act
-            var result = (Position) position;
+            var result = Position.Create(position);
 
             // Assert
             Assert.IsNotNull(result);
@@ -26,10 +26,7 @@ namespace FlareHR.Battleship.Tests
             var position = "k5";
 
             // Act, Assert
-            Assert.Throws<ArgumentOutOfRangeException>(() =>
-            {
-                var _ = (Position) position;
-            });
+            Assert.Throws<ArgumentOutOfRangeException>(() => Position.Create(position));
         }
 
         [Test]
@@ -39,10 +36,7 @@ namespace FlareHR.Battleship.Tests
             var position = "c12";
 
             // Act, Assert
-            Assert.Throws<ArgumentOutOfRangeException>(() =>
-            {
-                var _ = (Position)position;
-            });
+            Assert.Throws<ArgumentOutOfRangeException>(() => Position.Create(position));
         }
     }
 }

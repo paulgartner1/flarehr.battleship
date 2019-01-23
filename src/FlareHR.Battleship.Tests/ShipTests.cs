@@ -12,7 +12,7 @@ namespace FlareHR.Battleship.Tests
             var shipSize = 7;
 
             // Act
-            var ship = Ship.Create("A1", Orientation.Horizontal, shipSize);
+            var ship = Ship.Create(Position.Create("A1"), Orientation.Horizontal, shipSize);
 
             // Assert
             Assert.IsNotNull(ship);
@@ -25,7 +25,7 @@ namespace FlareHR.Battleship.Tests
             var shipSize = 11;
 
             // Act
-            var ship = Ship.Create("A1", Orientation.Horizontal, shipSize);
+            var ship = Ship.Create(Position.Create("A1"), Orientation.Horizontal, shipSize);
 
             // Assert
             Assert.IsNull(ship);
@@ -38,7 +38,7 @@ namespace FlareHR.Battleship.Tests
             var shipSize = 5;
 
             // Act
-            var ship = Ship.Create("G7", Orientation.Horizontal, shipSize);
+            var ship = Ship.Create(Position.Create("G7"), Orientation.Horizontal, shipSize);
 
             // Assert
             Assert.IsNull(ship);
@@ -51,7 +51,7 @@ namespace FlareHR.Battleship.Tests
             var shipSize = 5;
 
             // Act
-            var ship = Ship.Create("G7", Orientation.Vertical, shipSize);
+            var ship = Ship.Create(Position.Create("G7"), Orientation.Vertical, shipSize);
 
             // Assert
             Assert.IsNull(ship);
