@@ -5,7 +5,7 @@ namespace FlareHR.Battleship
 {
     public class Position
     {
-        private static readonly Regex ValidationRegex = new Regex(@"^[A-J](10|\d)$", RegexOptions.IgnoreCase);
+        private static readonly Regex ValidationRegex = new Regex(@"^[A-J](10|[1-9])$", RegexOptions.IgnoreCase);
 
         public char X { get; }
         public int Y { get; }

@@ -37,6 +37,11 @@ namespace FlareHR.Battleship
 
             try
             {
+                if (shipLength <= 0)
+                {
+                    return null;
+                }
+
                 var occupiedPositions = CalculateOccupiedPositions().ToArray();
                 return new Ship(occupiedPositions);
             }

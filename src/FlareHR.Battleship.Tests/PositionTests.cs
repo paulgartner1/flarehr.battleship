@@ -38,5 +38,15 @@ namespace FlareHR.Battleship.Tests
             // Act, Assert
             Assert.Throws<ArgumentOutOfRangeException>(() => Position.Create(position));
         }
+
+        [Test]
+        public void Given_position_outsize_board_When_position_created_Then_exception_thrown3()
+        {
+            // Arrange
+            var position = "c0";
+
+            // Act, Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => Position.Create(position));
+        }
     }
 }

@@ -56,5 +56,31 @@ namespace FlareHR.Battleship.Tests
             // Assert
             Assert.IsNull(ship);
         }
+
+        [Test]
+        public void Given_ship_size_0_When_create_Then_the_ship_is_not_created()
+        {
+            // Arrange
+            var shipSize = 0;
+
+            // Act
+            var ship = Ship.Create(Position.Create("G7"), Orientation.Vertical, shipSize);
+
+            // Assert
+            Assert.IsNull(ship);
+        }
+
+        [Test]
+        public void Given_ship_size_negative_When_create_Then_the_ship_is_not_created()
+        {
+            // Arrange
+            var shipSize = -5;
+
+            // Act
+            var ship = Ship.Create(Position.Create("G7"), Orientation.Vertical, shipSize);
+
+            // Assert
+            Assert.IsNull(ship);
+        }
     }
 }
