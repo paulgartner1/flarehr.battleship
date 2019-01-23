@@ -35,13 +35,13 @@ namespace FlareHR.Battleship
                 }
             }
 
+            if (shipLength <= 0)
+            {
+                return null;
+            }
+
             try
             {
-                if (shipLength <= 0)
-                {
-                    return null;
-                }
-
                 var occupiedPositions = CalculateOccupiedPositions().ToArray();
                 return new Ship(occupiedPositions);
             }
